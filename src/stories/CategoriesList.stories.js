@@ -20,6 +20,12 @@ export default {
                 return response;
               })();
             },
+            getCategories: () => {
+              (() => {
+                let response = [];
+                return response;
+              })();
+            },
           },
         }}
       >
@@ -39,4 +45,7 @@ export const WithFiveCategoriesInList = () => (
   <CategoriesList
     categories={['animal', 'science', 'food', 'sport', 'travel']}
   />
+);
+export const WithHttpFetchError = () => (
+  <CategoriesList categories={['error']} />
 );
