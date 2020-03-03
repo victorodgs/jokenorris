@@ -20,6 +20,7 @@ Clone o repositório e no terminal execute os passos a seguir
 Visitando `http://localhost:3000/` no browser, você irá acessar o Jokenorris!
 
 **UI Testing**
+
 Usamos Storybook para fazer testes de UI na aplicação. Assim, podemos saber como os componentes que sofrem mutação se comportam com diferentes entradas de dados.
 Você pode conferir e escrever novas histórias na pasta `src/stories`
 
