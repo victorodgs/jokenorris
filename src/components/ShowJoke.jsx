@@ -14,6 +14,7 @@ export default props => {
   const [isLoading, setIsLoading] = useState(true);
   const currentJoke = props.currentJoke || jokesContext.currentJoke;
   const {category} = useParams();
+  console.log(currentJoke);
 
   useEffect(() => {
     if (jokesContext) {
@@ -30,7 +31,7 @@ export default props => {
 
   return (
     <section className="joke">
-      <If test={!isLoading}>
+      <If test={!isLoading && currentJoke !== 'error'}>
         <div className="chuck-photo">
           <img
             className="chuck-photo--img"
@@ -55,6 +56,17 @@ export default props => {
         ) : (
           false
         )}
+      </If>
+
+      <If test={!isLoading && currentJoke === 'error'}>
+        <div className="chuck-photo">
+          <img
+            className="chuck-photo--img"
+            src={ChuckPhoto}
+            alt="Chucknorris Photography"
+          />
+        </div>
+        <h3 className="empty">There's no Joke to Display. Try Again.</h3>
       </If>
 
       <If test={isLoading}>

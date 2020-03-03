@@ -10,17 +10,25 @@ export const JokesProvider = props => {
 
   const getCategories = () => {
     (async () => {
-      let response = await api.get('/categories');
-      setCategories(response.data);
+      try {
+        let response = await api.get('/categories');
+        setCategories(response.data);
+      } catch (e) {
+        setCategories(['error']);
+      }
     })();
   };
 
   const getRandomJoke = category => {
     (async () => {
-      let response = await api.get(`/random?category=${category}`);
-      setCurrentjoke(response.data.value);
-      const laughAudio = document.getElementById('laugh');
-      laughAudio.play();
+      try {
+        let response = await api.get(`/random?category=${category}`);
+        setCurrentjoke(response.data.value);
+        const laughAudio = document.getElementById('laugh');
+        laughAudio.play();
+      } catch (error) {
+        setCurrentjoke('error');
+      }
     })();
   };
 
