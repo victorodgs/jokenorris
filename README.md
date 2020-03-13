@@ -1,4 +1,4 @@
-## JOKENORRIS (Feito com carinho para os amigos do GuiaBolso)
+## JOKENORRIS
 
 Esse é um projeto criado para demonstrar skills com React e Storybook. Siga os passos para ter a aplicação rodando em ambiente local.
 
