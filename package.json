@@ -51,6 +51,6 @@
     "babel-register": "^6.26.0",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0",
-    "jsdom": "^9.4.1"
+    "jsdom": "^16.5.0"
   }
 }
